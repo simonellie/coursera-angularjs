@@ -1,0 +1,15 @@
+.colorRed {
+  color: red;
+}
+
+.colorGreen {
+  color: green;
+}
+
+.textBoxColorRed {
+  border:1px solid red;
+}
+
+.textBoxColorGreen {
+  border:1px solid green;
+}
