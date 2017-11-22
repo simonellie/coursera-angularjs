@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="myFirstApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    </script>
+    <title>My first AngularJS App</title>
+  </head>
+  <body>
+    <h1>My first AngularJS app!</h1>
+    <div ng-controller="MyFirstController">
+      Inside my input I can find: {{name}}
+      <br>
+      {{sayHello()}}
+      <br>
+      <input type="text" ng-model="name">
+      <br>
+      {{nameInput}}
+    </div>
+  </body>
+</html>
