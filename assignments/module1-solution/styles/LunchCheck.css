@@ -13,3 +13,8 @@
 .textBoxColorGreen {
   border:1px solid green;
 }
+
+footer {
+  text-align: center;
+  margin: 10px;
+}
