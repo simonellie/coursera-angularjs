@@ -1,0 +1,7 @@
+<div class="body-container">
+  <h1>List Categories Page</h1>
+    <div class="listCategories" ng-repeat="category in $ctrl.categories">
+      <button type="button" class="btn btn-default btn-xs" ui-sref="itemList({categoryID: $ctrl.categories[$index].short_name, categoryName: $ctrl.categories[$index].name})">Show items</button>
+        <b>{{category.name}}:</b> {{category.special_instructions}}
+    </div>
+</div>
