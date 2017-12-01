@@ -29,7 +29,7 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
   });
 
   $stateProvider.state('itemList', {
-    url: '/categories/{categoryName}_{categoryID}/item-list',
+    url: '/categories/{categoryID}/item-list',
     template: '<item-details category="$ctrl.category" items="$ctrl.items"></item-details>',
     controller: 'ItemsMenuComponentController',
     resolve: {
