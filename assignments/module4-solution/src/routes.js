@@ -30,10 +30,10 @@ function RoutesConfig($stateProvider, $urlRouterProvider) {
 
   $stateProvider.state('itemList', {
     url: '/categories/{categoryID}/item-list',
-    template: '<item-details category="$ctrl.category" items="$ctrl.items"></item-details>',
-    controller: 'ItemsMenuComponentController',
+    template: '<item-details category="itemMenu.category" items="itemMenu.items"></item-details>',
+    controller: 'ItemsMenuComponentController as itemMenu',
     resolve: {
-      item: ['$stateParams', 'MenuDataService',
+      items: ['$stateParams', 'MenuDataService',
             function ($stateParams, MenuDataService) {
               return MenuDataService.getItemsForCategory($stateParams.categoryID);
             }]

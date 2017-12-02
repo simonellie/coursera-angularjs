@@ -6,9 +6,9 @@ angular.module('MenuApp')
 
 ItemsMenuComponentController.$inject = ['items'];
 function ItemsMenuComponentController (items) {
-  var $ctrl = this;
-  $ctrl.category = items.category.name;
-  $ctrl.items = items.menu_items;
+  var itemMenu = this;
+  itemMenu.category = items.data.category.name;
+  itemMenu.items = items.data.menu_items;
 };
 
 })();
