@@ -1,0 +1,48 @@
+<div class="container">
+  <h2 class="text-center">Register</h2>
+
+  <div class="alert alert-success" role="alert" ng-if="reg.success==1">
+    <strong>Well done!</strong> Your information has been saved.
+  </div>
+  <div class="alert alert-danger" role="alert" ng-if="reg.success==2">
+    <strong>Ops!</strong> No such menu number exists.
+  </div>
+
+  <form name='regForm' novalidate>
+    <div class="form-group">
+      <label class="form-control-label">First Name:</label>
+      <input type="text" class="form-control"  name="firstname" placeholder="First Name"
+      ng-model="reg.user.firstname"
+      required>
+    </div>
+    <div class="form-group">
+      <label class="form-control-label">Last Name:</label>
+      <input type="text" class="form-control" name="lastname" placeholder="Last Name"
+      ng-model="reg.user.lastname"
+      required>
+    </div>
+    <div class="form-group">
+      <label class="form-control-label">Email:</label>
+      <input type="email" class="form-control" name="email" placeholder="Email"
+      ng-model="reg.user.email"
+      required>
+    </div>
+    <div class="form-group">
+      <label class="form-control-label">Phone:</label>
+      <input type="text" class="form-control" name="phone" placeholder="Phone ###-###-####"
+        ng-model="reg.user.phone"
+        pattern="(\d{3})-(\d{3})-(\d{4})">
+    </div>
+
+    <div class="form-group">
+      <label class="form-control-label">Menu item:</label>
+      <input type="text" class="form-control" name="menu_item" placeholder="Menu Item"
+        ng-model="reg.user.menu_item"
+        required>
+    </div>
+
+    <button type="submit" class="btn btn-primary pull-right"
+      ng-disabled="regForm.$invalid" ng-click="reg.submit()">Submit
+    </button>
+  </form>
+</div>

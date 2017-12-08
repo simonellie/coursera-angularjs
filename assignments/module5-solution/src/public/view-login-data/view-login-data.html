@@ -1,0 +1,20 @@
+<div class="container">
+  <h2 class="text-center" ng-if="vldCtrl.registered">User Info</h2>
+
+  <div class="alert alert-danger" role="alert" ng-if="!vldCtrl.registered">
+    <strong>Ops!</strong> Not Signed Up Yet. <a ui-sref="public.login">Sign up Now!</a>
+  </div>
+
+  <div ng-if="vldCtrl.registered" class="container">
+
+    <ul class="list-group">
+      <li class="list-group-item"><b>First Name</b>: {{vldCtrl.firstname}}</li>
+      <li class="list-group-item"><b>Last Name</b>: {{vldCtrl.lastname}}</li>
+      <li class="list-group-item"><b>Email</b>: {{vldCtrl.email}}</li>
+      <li class="list-group-item"><b>Phone</b>: {{vldCtrl.phone}}</li>
+      <li class="list-group-item"><b>Favourite Menu Item Name</b>: {{vldCtrl.menu_item_name}}</li>
+      <li class="list-group-item"><b>Favourite Menu Item Description</b>: {{vldCtrl.menu_item_description}}</li>
+      <li class="list-group-item"><b>Favourite Menu Item Image</b>:<br><br> <img ng-src="{{vldCtrl.menu_item_image_path}}" alt="{{vldCtrl.menu_item_name}}"></img></li>
+    </ul>
+  </div>
+<div>
